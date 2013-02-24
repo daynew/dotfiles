@@ -1,3 +1,6 @@
 [submodule "solarized"]
 	path = solarized
 	url = https://github.com/altercation/solarized.git
+[submodule "supertab"]
+	path = supertab
+	url = https://github.com/ervandew/supertab.git
