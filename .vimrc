@@ -34,6 +34,11 @@ set is
 "enable highlighted searches
 set hlsearch
 
+"create the swaps and backup directories
+silent !mkdir ~/.vim > /dev/null 2>&1
+silent !mkdir ~/.vim/swaps > /dev/null 2>&1
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+
 "set the swp file location
 set dir=~/.vim/swaps
 
