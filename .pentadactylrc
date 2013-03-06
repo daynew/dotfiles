@@ -1,0 +1,12 @@
+"1.0rc1
+
+loadplugins '\.(js|penta)$'
+group user
+
+" vim: set ft=pentadactyl:
+
+highlight -a Hint font-size: 130% !important;
+highlight -a Hint text-transform: uppercase;
+set hintkeys="asdfjklgh"
+imap jk <Esc>
+:set hlfind
