@@ -47,3 +47,7 @@ set backupdir=~/.vim/backups
 
 "make backspace work
 set backspace=2
+
+"add perl mason syntax dir
+autocmd BufNewFile,BufRead *.m,*.mi,*.mhtml,dhandler set filetype=mason
+
