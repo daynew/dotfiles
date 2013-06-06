@@ -9,11 +9,13 @@ function parse_git_branch {
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return
     echo "("${ref#refs/heads/}")"
 }
-export PS1="\[\e[2;31m\]<3\[\e[0m\] ";
-if [ -z ${GIT_INFO} ]; then
-    GIT_INFO="\$(parse_git_branch)"
-    export PS1="$PS1$GIT_INFO "
-fi
+
+#customize bash prompt
+export PS1="\[\e[31m\]<3\[\e[0m\] ";
+
+#Show the git branch name in the bash prompt
+GIT_INFO="\$(parse_git_branch)"
+export PS1="$GIT_INFO $PS1"
 
 #avoid the Too many open files problem
 ulimit -n 2000
