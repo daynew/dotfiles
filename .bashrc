@@ -27,4 +27,4 @@ alias gstats='git ls-tree -r HEAD|cut -f 2|grep -E "\.(cc|h|cpp|hpp|c|txt|m|mm)$
 alias glog='git log --decorate --graph --all --oneline'
 
 #start a simple http web server in the current working directory.  Requires Python
-alias webserver='python -m SimpleHTTPServer'
+alias webserver='python -m SimpleHTTPServer > /dev/null 2>&1'
