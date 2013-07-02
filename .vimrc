@@ -53,3 +53,7 @@ autocmd BufNewFile,BufRead *.m,*.mi,*.mhtml,dhandler set filetype=mason
 
 "Always display the filename
 set ls=2
+
+"Hide buffers instead of closing them when you switch buffers.
+"I want this setting so I can keep my undo history
+set hidden;
