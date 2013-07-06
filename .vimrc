@@ -56,4 +56,4 @@ set ls=2
 
 "Hide buffers instead of closing them when you switch buffers.
 "I want this setting so I can keep my undo history
-set hidden;
+set hidden
