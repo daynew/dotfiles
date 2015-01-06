@@ -57,3 +57,12 @@ set ls=2
 "Hide buffers instead of closing them when you switch buffers.
 "I want this setting so I can keep my undo history
 set hidden
+
+"DetectIndent plugin settings. These settings will run :DetectIndent
+"everytime a buffer is read. It will default to using 4 spaces for
+"indentations. It will only read 1024 lines to figure out the indentation
+"scheme.
+:autocmd BufReadPost * :DetectIndent 
+:let g:detectindent_preferred_expandtab = 1 
+:let g:detectindent_preferred_indent = 4 
+:let g:detectindent_max_lines_to_analyse = 1024
