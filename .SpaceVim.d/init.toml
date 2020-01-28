@@ -23,6 +23,10 @@
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
+    #enables my custom vim configurations
+    bootstrap_before = "config#before"
+    bootstrap_after = "config#after"
+    search_tools = ["rg"]
 
 # Enable autocomplete layer
 [[layers]]

@@ -114,3 +114,9 @@ export NVM_DIR="$HOME/.nvm"
 # path - add virutalenv
 export PATH=$PATH:~/.local/bin/
 export PATH=$PATH:/snap/bin/
+
+# increase the max number of files which can be watched by `entr`
+ulimit -n 10000
+
+# ripgrep make it easier to skip certain types
+alias rgcode="rg --glob '!*.level' --glob '!*.external' --glob '!*.json' --glob '!*.md*' --glob '!*.multi' --glob '!*.match' --glob '!*.yml' --glob '!*.csv'"
