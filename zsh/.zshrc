@@ -11,6 +11,16 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Bootstrap Powerlevel10k
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]; then
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+fi
+
+# Bootstrap Catppuccin P10k
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/catppuccin-powerlevel10k-themes" ]; then
+  git clone https://github.com/tolkonepiu/catppuccin-powerlevel10k-themes.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/catppuccin-powerlevel10k-themes
+fi
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -77,7 +87,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+zstyle ':catppuccin:p10k' 'theme' 'rainbow'
+zstyle ':catppuccin:p10k' 'flavour' 'mocha'
+plugins=(git catppuccin-powerlevel10k-themes)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,6 +126,10 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias vim=nvim
+
+# Manual overrides for Powerlevel10k Prompt Character colors (Catppuccin Mocha)
+typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND='#a6e3a1'
+typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND='#f38ba8'
 
 # Code.org speciifc stuff below
 
