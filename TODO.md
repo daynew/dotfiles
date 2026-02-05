@@ -1,2 +1,1 @@
-- [ ] Update tmux config to use different colors for the status bar
 - [ ] Get Ruby auto complete working
