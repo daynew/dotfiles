@@ -131,17 +131,5 @@ alias vim=nvim
 typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND='#a6e3a1'
 typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND='#f38ba8'
 
-# Code.org speciifc stuff below
-
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-eval "$(rbenv init -)"
-
-export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"
-
-. "$HOME/.local/share/../bin/env"
-
 # opencode
 export PATH=/home/daynewagner/.opencode/bin:$PATH

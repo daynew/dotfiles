@@ -1,1 +1,1 @@
-- [ ] Get Ruby auto complete working
+- [ ] Figure out some automation for quickly running ruby tests.
